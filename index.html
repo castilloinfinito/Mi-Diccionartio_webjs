@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Define el título de la pestaña del navegador ("Diccionario Web Profesional")-->  
+    <title>Diccionario Web Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <main>
+        <header>
+            <h1>📖 Diccionario Web</h1>
+    <!-- agrupa dos herramientas de interfaz:Un menú desplegable, cambiar el tipo de letra de la página entre varias opciones")-->        
+            <div class="controls">
+                <select id="fontSelector" aria-label="Seleccionar fuente">
+                    <option value="sans-serif">Sans Serif</option>
+                    <option value="serif">Serif</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="cursive">Cursive</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+     <!-- Un botón  diseñado para alternar entre un modo claro y un modo oscuro)-->            
+                <button id="themeToggle" aria-label="Cambiar tema">🌓 Cambio de Tema</button>
+            </div>
+        </header>
+<!-- s la barra donde el usuario escribirá la palabra en inglés que desea buscar -->
+        <input type="text" id="searchInput" placeholder="Busca una palabra en inglés..." aria-label="Buscador de palabras">
+  <!--Es un elemento de audio invisible. Por el contexto de un diccionario -->      
+        <audio id="audioPlayer"></audio>
+   <!-- espacio destinado a mostrar el historial de palabras buscadas-->     
+        <div id="history" class="history-container"></div>
+        <div id="result" aria-live="polite"></div>
+    </main>
+    <script src="app.js"></script>
+    <!-- el <body>, se enlaza el archivo de JavaScript (app.js).-->
+</body>
+</html>
