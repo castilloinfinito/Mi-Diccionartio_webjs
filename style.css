@@ -1,14 +1,16 @@
 :root { --bg: #fff; --text: #333; --card: #f4f4f4; --primary: #007bff; }
 [data-theme="dark"] { --bg: #222; --text: #eee; --card: #333; }
-
+/* variables CSS  para gestionar los colores de forma dinámica. */
 body { background: var(--bg); color: var(--text); font-family: sans-serif; padding: 20px; transition: 0.3s; line-height: 1.6; }
 main { max-width: 600px; margin: 0 auto; }
+/* define cómo se comportará el cuerpo de la página y el contenedor principal de la aplicación. */
 input { width: 100%; padding: 15px; font-size: 1.2rem; margin-bottom: 10px; border: 2px solid #ccc; border-radius: 8px; }
-
+/* define cómo se Componentes de la Interfaz (Buscador, Tarjetas y Botones). */
 .result-card { background: var(--card); padding: 20px; border-radius: 12px; margin-top: 20px; }
 .history-container { margin-bottom: 20px; }
 button { padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background: var(--primary); color: white; font-weight: bold; }
 button:hover { filter: brightness(0.9); }
+/*  se define a las personas que navegan usando el teclado (con la tecla Tab)*/
 button:focus, select:focus, input:focus { outline: 3px solid #ffbf47; outline-offset: 2px; }
 
 @media (max-width: 600px) { header { flex-direction: column; text-align: center; } }
