@@ -1,15 +1,16 @@
+// declaracion preliminar de variables para captura de informacion
 const searchInput = document.getElementById('searchInput');
 const resultDiv = document.getElementById('result');
 const themeToggle = document.getElementById('themeToggle');
 const fontSelector = document.getElementById('fontSelector');
 const historyDiv = document.getElementById('history');
 const audioPlayer = document.getElementById('audioPlayer');
-
+//El uso de la función debounce es una estrategia esencial para la eficiencia en aplicaciones que consumen APIs externas
 const debounce = (fn, delay) => {
     let timer;
     return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), delay); };
 };
-
+//Esta función recibe la URL del audio proporcionada por la API.
 const playAudio = (url) => {
     audioPlayer.src = url;
     audioPlayer.play();
